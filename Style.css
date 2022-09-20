@@ -1,0 +1,494 @@
+/*---Top Menu Liast-------------------------------------------*/
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #DCD7C9;
+}
+
+* {
+  font-family: Arial ;
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #71f6db;
+  background: linear-gradient(to left, #31281e, #D8C494);
+  height: 80px;
+  padding: 1em;
+}
+
+.menu-bar{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: #576F72;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 900px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu-bar {
+    position: absolute;
+    top: 0;
+    margin-top: 80px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu-bar li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu-bar li {
+    border: 1px solid #576F72;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu-bar > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #576F72;
+  }
+  .menu-bar > li:not(:last-child) {
+    border-bottom: 1px solid #576F72;
+  }
+}
+
+  li a{
+    text-decoration: none;
+    color: aliceblue;
+    } 
+  .active{
+      color: RGB(14, 16, 16);
+    }
+  li a:hover{
+    color: #080706;
+  }
+
+  
+
+/*-----------------Body Text ---------------------------*/
+
+  .Intro{
+    font-family: Arial;
+    margin: 20px
+  }
+
+  .P-Home{
+    margin: 20px;
+    font-family: Arial;
+    font-size:large;
+    text-align: justify;
+    line-height: 25px;
+    word-spacing: normal;
+  }
+  cite{
+    float: right;
+  }
+  cite a{
+    text-decoration: none;
+  }
+
+
+  
+  /*---------Car-img of home----------------*/
+  .img1 img{
+    width: 100%;
+  }
+  .img1 img #car3{
+    height: auto;
+  }
+  .img2 img{
+    width: 100%;
+ 
+  }
+ 
+  .img1{
+    box-sizing: border-box;
+  }
+  .img2{
+    box-sizing: border-box;
+  }
+  .img1::after {
+    content:"" ;
+    clear: both;
+    display: table;
+    
+  }
+  .img2::after{
+    content:"" ;
+    clear: both;
+    display: table;
+    
+  }
+  #car1, #car2, #car3, #car4, #car4, #car5,#car6{
+    float: left;
+    width: 33.30%;
+    padding: 10px;
+  }
+  
+
+  video{ 
+    width: 100%;
+    height: 400px;
+    align-content: center;
+    padding: 5px;
+    border-style:solid;
+    border-width: 20px;
+    border-color: #9eb0b1;
+  }
+/*-------------Table-----------------*/
+.btn{
+  background-color: rgb(114, 126, 139);
+  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+.home-news-table img{
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  
+}
+.home-news-table table{
+  border-collapse: collapse;
+}
+#tdp1, #tdp2, #tdp3, #tdp4, #tdp5, #tdp6 {
+    text-align: justify;
+    line-height: 25px;
+    word-spacing: normal;
+    font-family: Arial;
+    padding: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h4{
+  color: rgb(103, 76, 75);
+  padding: 20px;
+}
+
+
+/*--------footer of Home--------------------------------------------*/
+
+
+    .footer{
+        background-color: #3F4E4F;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        
+    }
+    .footer a{
+        text-decoration: none;
+        color: white;
+    }
+/*-------------------- Home Ends ----------------*/
+
+/*--------------------contact Us form---------------*/
+.contactus{
+  margin: 2%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #416a2a;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 20px ;
+  border-radius: 15px;
+}
+
+input[type=submit]:hover {
+  background-color: #96b996;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin:2%;
+}
+#subject{
+  height: 200px;
+}
+
+.tblcon{
+  width: 85%;
+  padding-left: 2px;
+}
+
+/*--------------Register Online-----------------*/
+
+.tblreg{
+  width: 95%;
+  padding: 10px;
+  border: 1px;
+  border-collapse: collapse;
+  
+}
+.tblreg tr td{
+  padding :5px;
+}
+.btn{
+  margin-left: 20px;
+}
+
+/*-------------Our Drivers --------------------*/
+.OD {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.OD img {vertical-align:middle;
+          width: 100%;}
+
+.OD .trtx{
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.ODH{
+  margin-bottom: 1px;
+  margin-top: 1px;
+  margin-left: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+  background-color:  #b7b7b7;
+  border-radius: 2px; 
+  font-size: 22px;
+}
+.ODP{
+  margin-left: 2px;
+  padding: 5px;
+}
+/*---------------Q & A form-------------------*/
+/*Annimated search btn---*/
+.QAform{
+  position: relative;
+  margin-left: 100px;
+  margin-right: auto;
+  float: left;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid rgb(255, 254, 254);
+  padding: 5px;
+  background-image: url(icons-search25.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+#search{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+  
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #16142a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+  
+}
+.QAform:hover{
+  width: 200px;
+  cursor: pointer;
+  
+}
+
+.QAform:hover #search{
+  display: block;
+  
+}
+
+.QAform:hover .fa{
+  background: #07051a;
+  color: rgb(237, 190, 190);
+  
+}
+/*---Q&A Table --------------*/
+.QAtbl{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.QAtbl,td, th{
+  padding:5px;
+  border-collapse: collapse;
+}
+.QAtbl th{
+  text-align: left;
+  
+}
+.QAtbl td{
+  text-align: justify;
+  padding: 5px;
+  line-height: 25px;
+  word-spacing: normal;
+  font-family: Arial;
+}
+#QAP{
+  margin-left: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*---------------About Us page-----------*/
+#about h3{
+  margin-left: 10px;
+}
+#about img{
+  width: 100%;
+  height: 180px;
+  padding: 8px;
+}
+#tblabout{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+ 
+}
+
+#tblabout th{
+  text-align: left;
+  
+}
+#tblabout td{
+  text-align: justify;
+  line-height: 25px;
+  word-spacing: normal;
+  font-family: Arial;
+}
+
+.tblabout{
+  width: 100%;
+  padding: 20px;
+
+}
+
+.tblabout td{
+  text-align: justify;
+  line-height: 25px;
+  word-spacing: normal;
+  padding:20px;
+}
+
